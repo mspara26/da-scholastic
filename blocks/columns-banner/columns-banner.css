@@ -1,0 +1,129 @@
+/* Columns Banner - image + text side-by-side, vertically centered */
+.columns-banner > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.columns-banner > div > div {
+  order: 1;
+}
+
+/* image column */
+.columns-banner > div > .columns-banner-img-col {
+  order: 0;
+  line-height: 0;
+}
+
+.columns-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* text column */
+.columns-banner > div > div:not(.columns-banner-img-col) {
+  padding: var(--spacing-s) 0;
+}
+
+.columns-banner h2,
+.columns-banner h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 100;
+  margin-top: 0;
+}
+
+.columns-banner h2 a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.columns-banner p {
+  font-size: var(--body-font-size-m);
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+/* CTA button */
+.columns-banner a.button:any-link {
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  border-radius: var(--button-border-radius);
+}
+
+.columns-banner a.button:hover {
+  background-color: var(--button-bg-hover);
+}
+
+@media (width >= 900px) {
+  .columns-banner > div {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-xl);
+  }
+
+  .columns-banner > div > div {
+    flex: 1;
+    order: unset;
+  }
+
+  .columns-banner h2,
+  .columns-banner h3 {
+    font-size: var(--heading-font-size-xl);
+  }
+}
+
+/* --- Yellow-pattern section: centered stacked layout --- */
+/* stylelint-disable-next-line no-descending-specificity */
+.yellow-pattern .columns-banner > div {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-s);
+}
+
+.yellow-pattern .columns-banner > div > div {
+  order: unset;
+  flex: none;
+  width: 100%;
+}
+
+.yellow-pattern .columns-banner > div > .columns-banner-img-col {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.yellow-pattern .columns-banner img {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.yellow-pattern .columns-banner h2 {
+  font-size: var(--heading-font-size-m);
+  margin-top: var(--spacing-xs);
+  margin-bottom: var(--spacing-xs);
+}
+
+.yellow-pattern .columns-banner .button-container {
+  margin-top: 0;
+}
+
+@media (width >= 900px) {
+  .yellow-pattern .columns-banner > div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .yellow-pattern .columns-banner > div > div {
+    flex: none;
+  }
+
+  .yellow-pattern .columns-banner > div > .columns-banner-img-col {
+    max-width: 400px;
+  }
+
+  .yellow-pattern .columns-banner h2 {
+    font-size: var(--heading-font-size-l);
+  }
+}

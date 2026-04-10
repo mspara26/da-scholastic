@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-showcase",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-04-07T17:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.scholastic.com/home",
+    "originPage": "Scholastic homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "homepage-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background-image + floating-images + heading + CTA",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections",
+      "promotional landing pages with background imagery",
+      "seasonal campaign heroes"
+    ],
+    "notSuitableFor": [
+      "text-only hero sections",
+      "minimal blog post heroes",
+      "product detail pages"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T17:04:00.000Z"
+  }
+}

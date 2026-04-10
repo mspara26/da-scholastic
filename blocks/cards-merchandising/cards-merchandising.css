@@ -1,0 +1,92 @@
+/* Cards Merchandising - 3-card grid: image + rubric + title + description */
+.cards-merchandising > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+}
+
+.cards-merchandising > ul > li {
+  background-color: var(--background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 8%);
+  transition: box-shadow var(--transition-base), transform var(--transition-fast);
+}
+
+.cards-merchandising > ul > li:hover {
+  box-shadow: 0 6px 20px rgb(0 0 0 / 12%);
+  transform: translateY(-2px);
+}
+
+/* image */
+.cards-merchandising .cards-merchandising-card-image {
+  line-height: 0;
+}
+
+.cards-merchandising > ul > li img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+/* text body */
+.cards-merchandising .cards-merchandising-card-body {
+  padding: var(--spacing-m);
+}
+
+/* eyebrow / rubric */
+.cards-merchandising .cards-merchandising-card-body p strong {
+  display: block;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: var(--label-text-transform);
+  color: var(--label-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.cards-merchandising .cards-merchandising-card-body h3,
+.cards-merchandising .cards-merchandising-card-body h4 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 100;
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.cards-merchandising .cards-merchandising-card-body p {
+  font-size: var(--body-font-size-s);
+  font-weight: 300;
+  color: var(--text-color);
+  margin-top: 0;
+}
+
+/* CTA link */
+.cards-merchandising a:any-link:not(.button) {
+  font-size: var(--label-font-size);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  text-decoration: none;
+}
+
+.cards-merchandising a:any-link:not(.button):hover {
+  color: var(--brand-red-dark);
+  text-decoration: underline;
+}
+
+@media (width >= 600px) {
+  .cards-merchandising > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-merchandising > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

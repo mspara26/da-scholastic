@@ -1,0 +1,115 @@
+/* Hero Showcase - centered image above heading with text CTA */
+.hero-showcase-container .hero-showcase-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-showcase {
+  position: relative;
+  text-align: center;
+  padding: 40px 24px 80px;
+}
+
+/* Row with the book cover image */
+.hero-showcase > div:first-child {
+  margin-bottom: var(--spacing-m);
+}
+
+.hero-showcase > div:first-child img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Row with heading + CTA */
+.hero-showcase > div:last-child {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.hero-showcase h1,
+.hero-showcase h2,
+.hero-showcase h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 100;
+  letter-spacing: -0.4px;
+  color: var(--text-color);
+  margin-top: 0;
+  margin-bottom: var(--spacing-s);
+}
+
+.hero-showcase h2 a:any-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.hero-showcase h2 a:hover {
+  text-decoration: none;
+}
+
+/* CTA text link - red uppercase with underline */
+.hero-showcase em a:any-link {
+  font-style: normal;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--brand-red);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.hero-showcase em a:hover {
+  color: var(--brand-red-dark);
+}
+
+/* Prevent em from italicizing */
+.hero-showcase em {
+  font-style: normal;
+}
+
+/* Override button styles if any link gets auto-buttoned */
+.hero-showcase a.button:any-link {
+  background-color: transparent;
+  color: var(--brand-red);
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: var(--label-font-size);
+  font-weight: var(--label-font-weight);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  white-space: normal;
+}
+
+.hero-showcase a.button:hover {
+  background-color: transparent;
+  color: var(--brand-red-dark);
+}
+
+/* no-image variant - transparent bg so section color shows through */
+.hero-showcase.no-image {
+  background-color: transparent;
+}
+
+@media (width >= 900px) {
+  .hero-showcase {
+    padding: 40px 32px 80px;
+  }
+
+  .hero-showcase h1,
+  .hero-showcase h2 {
+    font-size: var(--heading-font-size-xxl);
+  }
+
+  .hero-showcase > div:first-child img {
+    max-width: 800px;
+  }
+}

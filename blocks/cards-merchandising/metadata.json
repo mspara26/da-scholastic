@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-merchandising",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-04-07T17:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.scholastic.com/home",
+    "originPage": "Scholastic homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "merchandising-cards",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + rubric + title + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "three-card promotional grids",
+      "merchandising feature cards",
+      "category highlight cards with images"
+    ],
+    "notSuitableFor": [
+      "single promotional cards",
+      "product listing grids",
+      "icon-based feature lists"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T17:04:00.000Z"
+  }
+}

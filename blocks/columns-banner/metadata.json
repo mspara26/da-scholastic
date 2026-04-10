@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-banner",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-04-07T17:04:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.scholastic.com/home",
+    "originPage": "Scholastic homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional-banner",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional banners with image and text side-by-side",
+      "feature highlight sections",
+      "CTA banners with imagery"
+    ],
+    "notSuitableFor": [
+      "multi-column comparison layouts",
+      "text-only side-by-side content",
+      "three-column layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-04-07T17:04:00.000Z"
+  }
+}
