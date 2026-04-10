@@ -21,30 +21,35 @@
   box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
 }
 
-/* image cell - the large promotional image */
-.cards-promo .cards-promo-card-image {
+/* ALL cells get min-width 0 to prevent flex overflow */
+.cards-promo > ul > li > div {
+  min-width: 0;
+}
+
+/* First cell = large promotional image */
+.cards-promo > ul > li > div:first-child {
   line-height: 0;
   overflow: hidden;
 }
 
-.cards-promo .cards-promo-card-image p {
+.cards-promo > ul > li > div:first-child p {
   margin: 0;
 }
 
-.cards-promo .cards-promo-card-image img {
+.cards-promo > ul > li > div:first-child img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
 }
 
-/* text body cell */
-.cards-promo .cards-promo-card-body {
+/* Second cell = logo + text + button */
+.cards-promo > ul > li > div:last-child {
   padding: var(--spacing-l) var(--spacing-m);
 }
 
-/* Any image inside the text body is a logo — constrain it */
-.cards-promo .cards-promo-card-body img {
+/* Logo image in second cell — always constrain */
+.cards-promo > ul > li > div:last-child img {
   max-width: 220px;
   width: auto;
   height: auto;
@@ -52,8 +57,8 @@
   margin-bottom: var(--spacing-s);
 }
 
-/* description text */
-.cards-promo .cards-promo-card-body p {
+/* Description text */
+.cards-promo > ul > li > div:last-child p {
   font-size: var(--body-font-size-m);
   font-weight: 300;
   color: var(--text-color);
@@ -63,8 +68,8 @@
   overflow-wrap: break-word;
 }
 
-/* CTA button - red filled pill */
-.cards-promo .cards-promo-card-body a.button:any-link {
+/* CTA button */
+.cards-promo > ul > li > div:last-child a.button:any-link {
   background-color: var(--button-bg);
   color: var(--button-color);
   border-radius: var(--button-border-radius);
@@ -76,16 +81,8 @@
   margin-top: var(--spacing-s);
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.cards-promo .cards-promo-card-body a.button:hover {
+.cards-promo > ul > li > div:last-child a.button:hover {
   background-color: var(--button-bg-hover);
-}
-
-/* Fallback: if JS doesn't split cells, constrain the second div */
-.cards-promo > ul > li > div:nth-child(2) img {
-  max-width: 220px;
-  width: auto;
-  height: auto;
 }
 
 @media (width >= 900px) {
@@ -93,17 +90,15 @@
     flex-direction: row;
   }
 
-  .cards-promo .cards-promo-card-image {
+  .cards-promo > ul > li > div:first-child {
     flex: 0 0 45%;
-    min-width: 0;
   }
 
-  .cards-promo .cards-promo-card-body {
+  .cards-promo > ul > li > div:last-child {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-l) var(--spacing-xl);
-    min-width: 0;
   }
 }
