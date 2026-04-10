@@ -379,13 +379,8 @@ main .section.yellow-pattern {
   background-position: top center;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 0;
+  padding: 24px 0;
   text-align: center;
-  aspect-ratio: 1534 / 322;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 main .section.green-pattern {

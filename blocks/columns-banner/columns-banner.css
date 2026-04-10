@@ -97,7 +97,7 @@
 }
 
 .yellow-pattern .columns-banner > div > .columns-banner-img-col {
-  max-width: 320px;
+  max-width: 280px;
   margin: 0 auto;
 }
 
@@ -107,13 +107,24 @@
 }
 
 .yellow-pattern .columns-banner h2 {
-  font-size: var(--heading-font-size-m);
+  font-size: var(--heading-font-size-s);
   margin-top: var(--spacing-xs);
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: 4px;
+}
+
+.yellow-pattern .columns-banner p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .yellow-pattern .columns-banner .button-container {
   margin-top: 0;
+}
+
+.yellow-pattern .columns-banner a.button:any-link {
+  margin: 4px 0;
+  padding: 8px 24px;
+  font-size: 12px;
 }
 
 @media (width >= 900px) {
@@ -127,10 +138,10 @@
   }
 
   .yellow-pattern .columns-banner > div > .columns-banner-img-col {
-    max-width: 400px;
+    max-width: 360px;
   }
 
   .yellow-pattern .columns-banner h2 {
-    font-size: var(--heading-font-size-l);
+    font-size: var(--heading-font-size-m);
   }
 }

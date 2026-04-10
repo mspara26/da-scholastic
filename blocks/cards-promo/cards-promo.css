@@ -42,15 +42,15 @@
   padding: var(--spacing-l) var(--spacing-m);
 }
 
-/* Book Clubs logo */
-.cards-promo .cards-promo-card-body > p:first-child img {
+/* Logo image inside text body — constrain size */
+.cards-promo .cards-promo-card-body img {
   max-width: 220px;
   height: auto;
   margin-bottom: var(--spacing-s);
 }
 
 /* description text */
-.cards-promo .cards-promo-card-body > p {
+.cards-promo .cards-promo-card-body p {
   font-size: var(--body-font-size-m);
   font-weight: 300;
   color: var(--text-color);
@@ -71,6 +71,7 @@
   margin-top: var(--spacing-s);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-promo .cards-promo-card-body a.button:hover {
   background-color: var(--button-bg-hover);
 }

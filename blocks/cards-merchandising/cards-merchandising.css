@@ -71,6 +71,7 @@
 }
 
 /* CTA link */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-merchandising a:any-link:not(.button) {
   font-size: var(--label-font-size);
   font-weight: 700;
