@@ -50,8 +50,8 @@
   --spacing-xl: 64px;
 
   /* button tokens */
-  --button-bg: var(--brand-blue);
-  --button-bg-hover: var(--brand-blue-dark);
+  --button-bg: var(--brand-red);
+  --button-bg-hover: var(--brand-red-dark);
   --button-color: #fff;
   --button-border-radius: 30px;
   --button-padding: 12px 28px;
