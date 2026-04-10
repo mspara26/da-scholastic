@@ -21,9 +21,10 @@
   box-shadow: 0 4px 20px rgb(0 0 0 / 10%);
 }
 
-/* image cell */
+/* image cell - the large promotional image */
 .cards-promo .cards-promo-card-image {
   line-height: 0;
+  overflow: hidden;
 }
 
 .cards-promo .cards-promo-card-image p {
@@ -32,7 +33,7 @@
 
 .cards-promo .cards-promo-card-image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
 }
@@ -42,10 +43,12 @@
   padding: var(--spacing-l) var(--spacing-m);
 }
 
-/* Logo image inside text body — constrain size */
+/* Any image inside the text body is a logo — constrain it */
 .cards-promo .cards-promo-card-body img {
   max-width: 220px;
+  width: auto;
   height: auto;
+  display: block;
   margin-bottom: var(--spacing-s);
 }
 
@@ -56,6 +59,8 @@
   color: var(--text-color);
   margin-top: 0;
   line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* CTA button - red filled pill */
@@ -76,6 +81,13 @@
   background-color: var(--button-bg-hover);
 }
 
+/* Fallback: if JS doesn't split cells, constrain the second div */
+.cards-promo > ul > li > div:nth-child(2) img {
+  max-width: 220px;
+  width: auto;
+  height: auto;
+}
+
 @media (width >= 900px) {
   .cards-promo > ul > li {
     flex-direction: row;
@@ -83,6 +95,7 @@
 
   .cards-promo .cards-promo-card-image {
     flex: 0 0 45%;
+    min-width: 0;
   }
 
   .cards-promo .cards-promo-card-body {
@@ -91,5 +104,6 @@
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-l) var(--spacing-xl);
+    min-width: 0;
   }
 }
