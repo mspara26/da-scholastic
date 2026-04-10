@@ -28,7 +28,7 @@
   margin: 0 auto;
 }
 
-/* Heading */
+/* Heading - force dark text color on all links inside headings */
 .hero-showcase h1,
 .hero-showcase h2,
 .hero-showcase h3 {
@@ -40,50 +40,42 @@
   margin-bottom: var(--spacing-s);
 }
 
+/* stylelint-disable no-descending-specificity */
+.hero-showcase h1 a,
+.hero-showcase h2 a,
+.hero-showcase h3 a,
 .hero-showcase h1 a:any-link,
 .hero-showcase h2 a:any-link,
-.hero-showcase h3 a:any-link {
-  color: inherit;
+.hero-showcase h3 a:any-link,
+.hero-showcase h1 a:visited,
+.hero-showcase h2 a:visited,
+.hero-showcase h3 a:visited {
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .hero-showcase h1 a:hover,
 .hero-showcase h2 a:hover,
 .hero-showcase h3 a:hover {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
 }
 
-/* CTA text link - red uppercase with underline */
+/* CTA - override ALL button/link styles to show as red text link */
+.hero-showcase .button-container a,
+.hero-showcase .button-container a.button,
+.hero-showcase .button-container a:any-link,
+.hero-showcase .button-container a.button:any-link,
+.hero-showcase em a,
 .hero-showcase em a:any-link {
-  font-style: normal;
-  font-size: var(--label-font-size);
-  font-weight: var(--label-font-weight);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--brand-red);
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  text-decoration-thickness: 1px;
-}
-
-.hero-showcase em a:hover {
-  color: var(--brand-red-dark);
-}
-
-/* Prevent em from italicizing */
-.hero-showcase em {
-  font-style: normal;
-}
-
-/* Override button styles if any link gets auto-buttoned */
-.hero-showcase a.button:any-link {
+  display: inline;
   background-color: transparent;
   color: var(--brand-red);
   border: none;
   padding: 0;
   margin: 0;
   border-radius: 0;
+  font-style: normal;
   font-size: var(--label-font-size);
   font-weight: var(--label-font-weight);
   letter-spacing: 2px;
@@ -92,17 +84,26 @@
   text-underline-offset: 4px;
   text-decoration-thickness: 1px;
   white-space: normal;
+  box-shadow: none;
 }
 
-.hero-showcase a.button:hover {
+.hero-showcase .button-container a:hover,
+.hero-showcase .button-container a.button:hover,
+.hero-showcase em a:hover {
   background-color: transparent;
   color: var(--brand-red-dark);
+}
+
+/* Prevent em from italicizing */
+.hero-showcase em {
+  font-style: normal;
 }
 
 /* no-image variant - transparent bg so section color shows through */
 .hero-showcase.no-image {
   background-color: transparent;
 }
+/* stylelint-enable no-descending-specificity */
 
 @media (width >= 900px) {
   .hero-showcase {
