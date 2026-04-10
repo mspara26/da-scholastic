@@ -57,6 +57,12 @@
   margin-bottom: var(--spacing-xs);
 }
 
+.cards-merchandising .cards-merchandising-card-body h3 a:any-link,
+.cards-merchandising .cards-merchandising-card-body h4 a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .cards-merchandising .cards-merchandising-card-body p {
   font-size: var(--body-font-size-s);
   font-weight: 300;
